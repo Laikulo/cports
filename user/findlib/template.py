@@ -10,6 +10,7 @@ makedepends = [
         "ocaml",
         "ocaml-compiler-libs"
 ]
+depends = [ "ocaml-runtime" ]
 pkgdesc = "OCaml library manager"
 license = "MIT"
 url = "https://projects.camlcity.org/projects/findlib.html"
