@@ -58,3 +58,11 @@ source = [
 sha256 = [
     "ba66e6c7b46da3339bc7369ca90d647383660f8e74874a82dd8034a39193876e",
 ]
+
+
+def post_install(pkg):
+    # This hack is to pass 098_lint, because the completions for partclone.* are in partclone
+    pkg.mv(
+        f"{pkg.destdir}/usr/share/bash-completion/completions/partclone",
+        f"{pkg.destdir}/usr/share/bash-completion/completions/partclone.info",
+    )
